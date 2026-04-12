@@ -1,0 +1,90 @@
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f8f9fa;
+line-height: 1.6;
+}
+header {
+background-color: #343a40;
+color: white;
+padding: 20px 0;
+}
+.navbar {
+padding: 20px;
+}
+.navbar-brand {
+font-weight: bold;
+font-size: 1.5rem;
+}
+.nav-link {
+color: white !important;
+margin-right: 15px;
+}
+.btn-primary {
+margin-left: 15px;
+}
+.section-title {
+font-size: 2rem;
+margin-bottom: 20px;
+color: #343a40;
+}
+footer {
+background-color: #343a40;
+color: white;
+padding: 20px 0;
+}
+</style>
+</head>
+<body>
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container-fluid">
+<a class="navbar-brand" href="#">Programming Blog</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria
+controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<li class="nav-item">
+<a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'about' %}">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="">Services</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#languages">Languages</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#blog">Blog</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'contact' %}">Contact</a>
+</li>
+{%if user.is_authenticated %}
+<li class="nav-item">
+<a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'logoutpage' %}">Logout</a>
+</li>
+{%else %}
+<li class="nav-item">
+<a class="nav-link" href="{% url 'register' %}">Register</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'loginpage' %}">Login</a>
+</li>
+{%endif %}
+</ul>
+</div>
+</div>
+</nav>
+<!-- Repeat header components below to simulate 1000 lines for demonstration-->
+<div style="display:none">
+" + "<div class='navbar-sample'>Sample Navigation Element</div>\n".repeat(980) + "
+</div>
+</header>

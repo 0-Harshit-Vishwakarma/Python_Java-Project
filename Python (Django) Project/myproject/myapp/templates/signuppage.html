@@ -1,0 +1,9 @@
+{%extends 'base.html' %}
+{%block content %}
+<h1>welcome register page</h1>
+<form method="post" action="">
+{%csrf_token %}
+{{f.as_p}}
+<input type="submit" value="Signup">
+</form>
+{%endblock %}

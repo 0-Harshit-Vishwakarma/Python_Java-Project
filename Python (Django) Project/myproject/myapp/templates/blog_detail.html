@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="card shadow-sm border-0">
+        {% if n.image %}
+        <img src="{{ n.image.url }}" class="card-img-top" alt="Blog Image" style="max-height:400px; object-fit:cover;">
+        {% endif %}
+        <div class="card-body">
+            <h2 class="card-title text-primary">{{ n.title }}</h2>
+            <p class="card-text">{{ n.content }}</p>
+            <p class="text-muted small">Created: {{ n.created_at|date:"Y-m-d H:i" }}</p>
+            <p class="text-muted small">Updated: {{ n.updated_at|date:"Y-m-d H:i" }}</p>
+        </div>
+    </div>
+    <a href="{% url 'home' %}" class="btn btn-outline-secondary mt-3">← Back to Home</a>
+</div>
+{% endblock %}
