@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delete Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Delete Book</h2>
+
+    <input type="text" id="searchDelete" placeholder="Search book..." onkeyup="searchDeleteBooks()">
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody id="deleteList"></tbody>
+    </table>
+
+    <p><a href="index.html">⬅ Back</a></p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    displayDeleteBooks();
+  </script>
+</body>
+</html>
