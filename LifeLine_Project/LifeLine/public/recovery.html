@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Password | LifeLine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="recovery">
+<header class="navbar">
+    <div class="container navbar-inner">
+        <a class="logo" href="index.html"><span class="logo-mark">♥</span> LifeLine</a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </div>
+</header>
+
+<main class="auth-page">
+    <div class="container">
+        <section class="auth-card">
+            <span class="eyebrow">Account Recovery</span>
+            <h1>Change Password</h1>
+            <p>Enter your registered email and choose a new password.</p>
+
+            <form id="recoveryForm">
+                <div class="field">
+                    <label for="recoveryEmail">Email Address</label>
+                    <input id="recoveryEmail" name="email" type="email" required autocomplete="email">
+                </div>
+
+                <div class="field" style="margin-top:16px;">
+                    <label for="recoveryPassword">New Password</label>
+                    <input id="recoveryPassword" name="newPassword" type="password" minlength="4" required autocomplete="new-password">
+                </div>
+
+                <div class="field" style="margin-top:16px;">
+                    <label for="recoveryConfirmPassword">Confirm Password</label>
+                    <input id="recoveryConfirmPassword" name="confirmPassword" type="password" minlength="4" required autocomplete="new-password">
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn btn-primary" type="submit">Change Password</button>
+                </div>
+            </form>
+
+            <div class="auth-links">
+                Remember your password? <a href="login.html">Back to Login</a>
+            </div>
+        </section>
+    </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

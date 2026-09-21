@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | LifeLine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="dashboard">
+
+<header class="navbar">
+    <div class="container navbar-inner">
+        <a class="logo" href="dashboard.html">
+            <span class="logo-mark">♥</span>
+            LifeLine
+        </a>
+
+        <nav class="nav-links">
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="about.html">About</a>
+
+            <div class="account-menu">
+                <button class="account-trigger" type="button">
+                    <span data-user-name>Account</span>
+                    <span class="account-chevron">▾</span>
+                </button>
+
+                <div class="account-dropdown">
+                    <div class="account-user">
+                        <strong data-user-name>Account</strong>
+                        <span data-user-email></span>
+                    </div>
+
+                    <a class="dropdown-link" href="profile.html">My Profile</a>
+                    <a class="dropdown-link" href="create.html">Emergency Card</a>
+                    <button class="dropdown-button dropdown-danger" data-delete-account type="button">Delete Account</button>
+                    <button class="dropdown-button" data-logout type="button">Logout</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="page">
+    <div class="container">
+
+        <div class="dashboard-welcome">
+            <div>
+                <span class="eyebrow">Dashboard</span>
+                <h1>Welcome, <span data-dashboard-name>User</span>.</h1>
+                <p>Your LifeLine information is organised and ready.</p>
+            </div>
+
+            <a class="btn btn-primary" href="create.html">
+                + Emergency Card
+            </a>
+        </div>
+
+        <section id="emptyState" class="empty-panel" hidden>
+            <div class="empty-icon">🆘</div>
+            <h2>Create your emergency card</h2>
+            <p>
+                Add your medical essentials and one trusted emergency contact.
+                Your card can later be viewed and saved as a PDF.
+            </p>
+
+            <div class="button-row" style="justify-content:center;">
+                <a class="btn btn-primary" href="create.html">
+                    Create Emergency Card
+                </a>
+            </div>
+        </section>
+
+        <section id="cardSummary" class="dashboard-card" hidden></section>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        LifeLine Dashboard
+    </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

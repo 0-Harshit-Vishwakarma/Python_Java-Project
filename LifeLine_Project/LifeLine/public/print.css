@@ -1,0 +1,219 @@
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 4mm;
+    }
+
+    html,
+    body {
+        width: 210mm;
+        height: 289mm;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #ffffff !important;
+        color: #111111 !important;
+        font-family: "Times New Roman", Times, serif !important;
+        font-size: 8.2pt !important;
+        line-height: 1.08 !important;
+        overflow: hidden !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box !important;
+        font-family: "Times New Roman", Times, serif !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .navbar,
+    .footer,
+    .page-header,
+    .screen-only,
+    .button-row,
+    #deleteCard {
+        display: none !important;
+    }
+
+    .page,
+    .page > .container,
+    .container {
+        width: 202mm !important;
+        max-width: 202mm !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+
+    #cardView {
+        width: 202mm !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .emergency-card {
+        width: 202mm !important;
+        max-width: 202mm !important;
+        margin: 0 !important;
+        padding: 4.2mm !important;
+        border: 1.2px solid #b91c1c !important;
+        border-radius: 2.5mm !important;
+        background: #ffffff !important;
+        color: #111111 !important;
+        box-shadow: none !important;
+        font-size: 8.2pt !important;
+        line-height: 1.08 !important;
+        page-break-before: avoid !important;
+        page-break-after: avoid !important;
+        page-break-inside: avoid !important;
+        break-before: avoid !important;
+        break-after: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    .emergency-card-top {
+        display: flex !important;
+        align-items: flex-start !important;
+        justify-content: space-between !important;
+        gap: 7mm !important;
+        margin-bottom: 2.5mm !important;
+        padding-bottom: 2.5mm !important;
+        border-bottom: 1px solid #d9dee7 !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    .emergency-card h1 {
+        margin: 0.5mm 0 0.7mm !important;
+        font-size: 17pt !important;
+        line-height: 1 !important;
+        color: #111111 !important;
+        letter-spacing: 0.1px !important;
+    }
+
+    .emergency-card p,
+    .emergency-card .muted {
+        margin: 0 !important;
+        color: #555555 !important;
+        font-size: 7pt !important;
+    }
+
+    .eyebrow {
+        color: #1d4ed8 !important;
+        font-size: 6.8pt !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.8px !important;
+    }
+
+    .emergency-badge {
+        padding: 1.4mm 2.4mm !important;
+        border-radius: 10mm !important;
+        background: #dc2626 !important;
+        color: #ffffff !important;
+        font-size: 6.8pt !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.3px !important;
+        white-space: nowrap !important;
+    }
+
+    .emergency-highlights {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 2mm !important;
+        margin: 0 0 2.5mm !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    .highlight,
+    .detail-grid > div,
+    .contact-main > div {
+        min-width: 0 !important;
+        padding: 1.9mm !important;
+        border: 0.45px solid #d4dbe5 !important;
+        border-radius: 1.2mm !important;
+        background: #f7f9fc !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    .highlight > span {
+        display: none !important;
+    }
+
+    .highlight small,
+    .highlight strong,
+    .detail-grid span,
+    .contact-main span {
+        display: block !important;
+    }
+
+    .highlight small,
+    .detail-grid span,
+    .contact-main span {
+        margin: 0 0 0.6mm !important;
+        color: #4b5563 !important;
+        font-size: 6.7pt !important;
+    }
+
+    .highlight strong,
+    .detail-grid strong,
+    .contact-main strong {
+        display: block !important;
+        color: #111111 !important;
+        font-size: 7.7pt !important;
+        line-height: 1.08 !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    .emergency-section {
+        margin: 0 0 2mm !important;
+        padding: 2mm 0 0 !important;
+        border-top: 0.5px solid #d6dce5 !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    .emergency-section h3 {
+        margin: 0 0 1.3mm !important;
+        color: #111111 !important;
+        font-size: 9.2pt !important;
+        line-height: 1 !important;
+    }
+
+    .detail-grid,
+    .contact-main {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1.8mm !important;
+    }
+
+    .detail-wide {
+        grid-column: span 3 !important;
+    }
+
+    .emergency-contact-box {
+        padding: 2mm !important;
+        border: 0.6px solid #efb2b2 !important;
+        border-radius: 1.2mm !important;
+        background: #fff8f8 !important;
+    }
+
+    .emergency-contact-box h3 {
+        color: #991b1b !important;
+    }
+
+    .emergency-contact-box .btn-emergency {
+        display: none !important;
+    }
+
+    a {
+        color: #111111 !important;
+        text-decoration: none !important;
+    }
+
+    .emergency-card > *:last-child {
+        margin-bottom: 0 !important;
+    }
+}
