@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | LifeLine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="register">
+
+<header class="navbar">
+    <div class="container navbar-inner">
+        <a class="logo" href="index.html">
+            <span class="logo-mark">♥</span>
+            LifeLine
+        </a>
+
+        <button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-links" id="site-navigation">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </div>
+</header>
+
+<main class="auth-page">
+    <div class="container">
+        <section class="auth-card">
+            <span class="eyebrow">Create Your Account</span>
+            <h1>Join LifeLine</h1>
+            <p>
+                Create your account first. You can add your emergency information
+                after signing in.
+            </p>
+
+            <form id="registerForm">
+                <div class="field">
+                    <label for="name">Full Name</label>
+                    <input id="name" name="name" type="text" required autocomplete="name">
+                </div>
+
+                <div class="field" style="margin-top: 16px;">
+                    <label for="email">Email Address</label>
+                    <input id="email" name="email" type="email" required autocomplete="email">
+                </div>
+
+                <div class="field" style="margin-top: 16px;">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" minlength="4" required autocomplete="new-password">
+                    <span class="field-help">Minimum 4 characters for this academic/demo build.</span>
+                </div>
+
+                <div class="field" style="margin-top: 16px;">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input id="confirmPassword" name="confirmPassword" type="password" minlength="4" required autocomplete="new-password">
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn btn-primary" type="submit">Create Account</button>
+                </div>
+            </form>
+
+            <div class="auth-links">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </div>
+        </section>
+    </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

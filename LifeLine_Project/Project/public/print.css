@@ -1,0 +1,365 @@
+@media print {
+    /*
+     * LifeLine PDF PRINT SETTINGS
+     * - One natural page on desktop and mobile
+     * - Larger, readable text
+     * - Times New Roman everywhere
+     * - No fixed page height, so mobile print engines do not create a blank page
+     */
+
+    @page {
+        size: auto;
+        margin: 4mm;
+    }
+
+    html,
+    body {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: #ffffff !important;
+        color: #111111 !important;
+
+        font-family: "Times New Roman", Times, serif !important;
+        font-size: 14pt !important;
+        line-height: 0.96 !important;
+
+        overflow: visible !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box !important;
+
+        font-family: "Times New Roman", Times, serif !important;
+
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* Hide screen-only elements from the PDF */
+    .navbar,
+    .footer,
+    .page-header,
+    .screen-only,
+    .button-row,
+    #deleteCard,
+    .btn-emergency {
+        display: none !important;
+    }
+
+    /* Printable wrapper */
+    .page,
+    .page > .container,
+    .container,
+    #cardView {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        overflow: visible !important;
+    }
+
+    /* ==============================
+       EMERGENCY CARD
+       ============================== */
+
+    .emergency-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+
+        margin: 0 !important;
+        padding: 3mm !important;
+
+        border: 1.2px solid #b91c1c !important;
+        border-radius: 2mm !important;
+
+        background: #ffffff !important;
+        color: #111111 !important;
+
+        box-shadow: none !important;
+
+        font-size: 14pt !important;
+        line-height: 0.96 !important;
+
+        overflow: visible !important;
+
+    }
+
+    /* ==============================
+       CARD HEADER
+       ============================== */
+
+    .emergency-card-top {
+        display: flex !important;
+        align-items: flex-start !important;
+        justify-content: space-between !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+
+        gap: 4mm !important;
+
+        margin-bottom: 1.2mm !important;
+        padding-bottom: 1.2mm !important;
+
+        border-bottom: 1px solid #d9dee7 !important;
+
+    }
+
+    .emergency-card h1 {
+        margin: 0.5mm 0 0.8mm !important;
+
+        font-size: 28pt !important;
+        line-height: 1 !important;
+        font-weight: 700 !important;
+
+        color: #111111 !important;
+        letter-spacing: 0 !important;
+    }
+
+    .emergency-card p,
+    .emergency-card .muted {
+        margin: 0 !important;
+
+        color: #555555 !important;
+
+        font-size: 12pt !important;
+        line-height: 1 !important;
+    }
+
+    .eyebrow {
+        color: #1d4ed8 !important;
+
+        font-size: 11pt !important;
+        font-weight: 700 !important;
+
+        letter-spacing: 0.7px !important;
+        line-height: 1 !important;
+    }
+
+    .emergency-badge {
+        padding: 1.2mm 2.2mm !important;
+
+        border-radius: 10mm !important;
+
+        background: #dc2626 !important;
+        color: #ffffff !important;
+
+        font-size: 11pt !important;
+        font-weight: 700 !important;
+
+        letter-spacing: 0.2px !important;
+        line-height: 1 !important;
+
+        white-space: nowrap !important;
+    }
+
+    /* ==============================
+       TOP HIGHLIGHTS
+       ============================== */
+
+    .emergency-highlights {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+
+        gap: 1.2mm !important;
+
+        margin: 0 0 1mm !important;
+
+    }
+
+    .highlight,
+    .detail-grid > div,
+    .contact-main > div {
+        min-width: 0 !important;
+        max-width: 100% !important;
+
+        padding: 1.4mm !important;
+
+        border: 0.45px solid #d4dbe5 !important;
+        border-radius: 1mm !important;
+
+        background: #f7f9fc !important;
+
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+
+    }
+
+    .highlight > span {
+        display: none !important;
+    }
+
+    .highlight small,
+    .highlight strong,
+    .detail-grid span,
+    .contact-main span {
+        display: block !important;
+    }
+
+    .highlight small,
+    .detail-grid span,
+    .contact-main span {
+        margin: 0 0 0.5mm !important;
+
+        color: #4b5563 !important;
+
+        font-size: 11pt !important;
+        line-height: 1 !important;
+    }
+
+    .highlight strong,
+    .detail-grid strong,
+    .contact-main strong {
+        display: block !important;
+
+        color: #111111 !important;
+
+        font-size: 12pt !important;
+        line-height: 1 !important;
+        font-weight: 700 !important;
+
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+    }
+
+    /* ==============================
+       SECTIONS
+       ============================== */
+
+    .emergency-section {
+        width: 100% !important;
+        min-width: 0 !important;
+
+        margin: 0 0 1mm !important;
+        padding: 1mm 0 0 !important;
+
+        border-top: 0.5px solid #d6dce5 !important;
+
+    }
+
+    .emergency-section h3 {
+        margin: 0 0 1mm !important;
+
+        color: #111111 !important;
+
+        font-size: 15.5pt !important;
+        line-height: 1 !important;
+        font-weight: 700 !important;
+    }
+
+    /* ==============================
+       DETAIL GRIDS
+       ============================== */
+
+    .detail-grid,
+    .contact-main {
+        display: grid !important;
+
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+
+        gap: 1mm !important;
+
+    }
+
+    .detail-wide {
+        grid-column: 1 / -1 !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    /* Long address: wrap it, never clip it */
+    .detail-wide strong {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        white-space: normal !important;
+
+        overflow: visible !important;
+
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+
+        font-size: 11pt !important;
+        line-height: 1 !important;
+    }
+
+    /* ==============================
+       EMERGENCY CONTACT
+       ============================== */
+
+    .emergency-contact-box {
+        width: 100% !important;
+        min-width: 0 !important;
+
+        padding: 1.2mm !important;
+
+        border: 0.6px solid #efb2b2 !important;
+        border-radius: 1mm !important;
+
+        background: #fff8f8 !important;
+
+    }
+
+    .emergency-contact-box h3 {
+        color: #991b1b !important;
+        margin-bottom: 0.7mm !important;
+    }
+
+    /* ==============================
+       LINKS
+       ============================== */
+
+    a {
+        color: #111111 !important;
+        text-decoration: none !important;
+    }
+
+    a[href^="tel:"] {
+        color: #111111 !important;
+        text-decoration: none !important;
+        white-space: nowrap !important;
+    }
+
+    /* ==============================
+       KEEP CARD TOGETHER
+       ============================== */
+
+    .emergency-card > *,
+    .emergency-card section,
+    .emergency-card .emergency-section,
+    .emergency-card .detail-grid,
+    .emergency-card .contact-main,
+    .emergency-card .emergency-contact-box {
+    }
+
+    .emergency-card > *:last-child {
+        margin-bottom: 0 !important;
+    }
+}

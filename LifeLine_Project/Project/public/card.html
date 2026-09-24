@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Card | LifeLine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="print.css">
+</head>
+
+<body data-page="card">
+
+<header class="navbar screen-only">
+    <div class="container navbar-inner">
+        <a class="logo" href="dashboard.html">
+            <span class="logo-mark">♥</span>
+            LifeLine
+        </a>
+
+        <button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-links" id="site-navigation">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="about.html">About</a>
+
+            <div class="account-menu">
+                <button class="account-trigger" type="button">
+                    <span data-user-name>Account</span>
+                    <span class="account-chevron">▾</span>
+                </button>
+
+                <div class="account-dropdown">
+                    <div class="account-user">
+                        <strong data-user-name>Account</strong>
+                        <span data-user-email></span>
+                    </div>
+
+                    <a class="dropdown-link" href="profile.html">My Profile</a>
+                    <button class="dropdown-button dropdown-danger" data-delete-account type="button">Delete Account</button>
+                    <button class="dropdown-button" data-logout type="button">Logout</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="page">
+    <div class="container">
+        <div class="page-header screen-only">
+            <span class="eyebrow">Your Emergency Card</span>
+            <h1>LifeLine Card</h1>
+            <p>
+                Keep this information ready. On mobile, you can call the
+                emergency contact directly from the card.
+            </p>
+
+            <div class="button-row">
+                <button class="btn btn-primary" onclick="window.print()">
+                    📄 Download / Save as PDF
+                </button>
+
+                <a class="btn btn-secondary" href="create.html">
+                    Edit Card
+                </a>
+
+                <button id="deleteCard" class="btn btn-danger" type="button">
+                    Delete Card
+                </button>
+            </div>
+        </div>
+
+        <div id="cardView"></div>
+    </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
